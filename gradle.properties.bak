@@ -17,4 +17,3 @@ org.gradle.jvmargs=-Xmx2048m
 android.useAndroidX=false
 # Automatically convert third-party libraries to use AndroidX
 android.enableJetifier=false
-org.gradle.plugin.com.android.application.version=7.2.0
