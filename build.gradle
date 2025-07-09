@@ -18,6 +18,13 @@ buildscript {
     }
     
 }
+
+// build.gradle
+plugins {
+    id 'com.android.application' version '7.2.0' apply false
+}
+
+
 allprojects {
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public/' } 
@@ -36,10 +43,7 @@ allprojects {
 	
 }
 
-// build.gradle
-plugins {
-    id 'com.android.application' version '7.2.0' apply false
-}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
