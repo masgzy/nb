@@ -37,6 +37,11 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
+    // 如果项目中使用了 Kotlin，确保 Kotlin 编译器的目标 JVM 版本与 Java 一致
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1' // 使用最新的 AppCompat 库
