@@ -3,7 +3,6 @@ name: Build & Publish Release APK
 on:
   workflow_dispatch:
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,9 +18,9 @@ jobs:
         java-version: '17'
 
     - name: Set up Android SDK
-      uses: actions/setup-android@v1
+      uses: android-actions/setup-android@v3
       with:
-        android-version: '34'
+        packages: 'platform-tools build-tools;34.0.0 android-34'
 
     - name: Decode Keystore
       run: |
