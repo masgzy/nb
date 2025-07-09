@@ -29,6 +29,7 @@ jobs:
     - name: Decode Keystore
       run: |
         echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > keystore.jks
+        chmod +x gradlew
 
     - name: Set up Gradle
       uses: gradle/gradle-build-action@v2
