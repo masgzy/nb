@@ -44,7 +44,15 @@ allprojects {
 	
 }
 
-
+// 根项目 build.gradle
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android') && project.android.namespace == null) {
+            project.android.namespace = project.group // 或手动指定包名
+            println("✅ 自动修复命名空间: ${project.name}")
+        }
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
