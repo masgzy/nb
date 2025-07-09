@@ -1,2 +1,18 @@
 include ':app'
 rootProject.name = "NB"
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google() // 添加 Google 仓库
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            // 映射 Android 插件请求
+            if (requested.id.id == 'com.android.application') {
+                useModule("com.android.tools.build:gradle:${requested.version}")
+            }
+        }
+    }
+}
