@@ -4,8 +4,8 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33 // 使用最新的 SDK 版本
-    namespace 'com.example.yourapp' // ⚠️ 替换为您的包名
+    //compileSdkVersion 33 // 使用最新的 SDK 版本
+    namespace 'com.kr.nb' 
     compileSdk 33
     defaultConfig {
         applicationId "com.kr.nb" // 包名

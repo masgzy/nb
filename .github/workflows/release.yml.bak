@@ -20,11 +20,11 @@ jobs:
     - name: Set up Android SDK
       uses: android-actions/setup-android@v3
       with:
-        packages: 'platform-tools build-tools;33.0.0'
+        packages: 'platform-tools build-tools;34.0.0'
 
     - name: Install Android SDK Platform 33
       run: |
-        echo "y" | sdkmanager "platforms;android-33"
+        echo "y" | sdkmanager "platforms;android-34"
 
     - name: Decode Keystore
       run: |
@@ -44,7 +44,7 @@ jobs:
 
     - name: Build Release APK
       run: |
-        ./gradlew wrapper --gradle-version=8.2.1 --distribution-type=all
+        ./gradlew wrapper --gradle-version=8.14.3 --distribution-type=all
         ./gradlew assembleRelease
       env:
         KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}

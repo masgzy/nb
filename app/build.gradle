@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    //compileSdkVersion 33 // 使用最新的 SDK 版本
+    //compileSdkVersion 34 // 使用最新的 SDK 版本
     namespace 'com.kr.nb' 
-    compileSdk 33
+    compileSdk 34
     defaultConfig {
         applicationId "com.kr.nb" // 包名
         minSdkVersion 21 // 最低支持的 SDK 版本
-        targetSdkVersion 33 // 目标 SDK 版本
+        targetSdkVersion 34 // 目标 SDK 版本
         versionCode 1 // 版本号
         versionName "1.0" // 版本名称
     }
